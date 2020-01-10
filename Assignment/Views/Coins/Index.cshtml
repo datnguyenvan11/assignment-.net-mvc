@@ -1,0 +1,60 @@
+﻿@model IEnumerable<Assignment.Models.Coin>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Market.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BaseAsset)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.QuoteAsset)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LastPrice)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Volum24h)
+        </th>
+       
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Market.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BaseAsset)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.QuoteAsset)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LastPrice)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Volum24h)
+        </td>
+
+    </tr>
+}
+
+</table>
